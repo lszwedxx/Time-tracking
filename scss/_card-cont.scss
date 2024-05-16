@@ -1,0 +1,42 @@
+@import './mixin';
+.card__cont{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 185px;
+    border-radius: 25px;
+    overflow: hidden;
+    @media (min-width: 1200px) {
+        height: 210px;;
+    }
+    &__icon{
+        position: absolute;
+        top:-5%;
+        right:10%;
+        z-index: 2;
+    }
+}
+.card__cont:nth-of-type(1)::before{
+    @include before-background-card;
+    background-color: $Light1;
+}
+.card__cont:nth-of-type(2)::before{
+    @include before-background-card;
+    background-color: $Soft1;
+}
+.card__cont:nth-of-type(3)::before{
+    @include before-background-card;
+    background-color: $Light2;
+}
+.card__cont:nth-of-type(4)::before{
+    @include before-background-card;
+    background-color: $Lime;
+}
+.card__cont:nth-of-type(5)::before{
+    @include before-background-card;
+    background-color: $Violet;
+}
+.card__cont:nth-of-type(6)::before{
+    @include before-background-card;
+    background-color: $Soft2;
+}

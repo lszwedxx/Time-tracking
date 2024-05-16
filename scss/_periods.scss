@@ -1,0 +1,40 @@
+.periods{
+    display:flex;
+    justify-content:space-around;
+    background-color: $Dark;
+    padding: 2rem 2rem 2rem 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    z-index: -1;
+    &::before{
+        content: "";
+        position:absolute;
+        bottom:25%;
+        left:0;
+        width:100%;
+        height:100px;
+        background-color: $Dark;
+        z-index: -1;
+    }
+    &__cont{
+        @media (min-width: 1200px) {
+            padding:.5rem;
+        }
+    }
+    &__link:hover{
+        color: #fff;
+        transition: all 0.3s;
+    }
+    @media (min-width: 1200px) {
+        font-size: 1.1rem;
+        flex-direction: column;
+        padding:.8rem .8rem .8rem 1.5rem;
+        .periods__link{
+            padding:.6rem;
+        }
+        
+    }
+}
+.active{
+    color: #fff;
+}

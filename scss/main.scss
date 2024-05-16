@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+@import './variables';
+@import './character';
+@import './periods';
+@import './card';
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color:$Very;
+    font-size: 4vw;
+    font-family:'Rubik';
+    color: #fff;
+    @media (min-width: 550px) {
+        font-size: 1.3rem;
+    }
+    @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
+    a{
+        text-decoration: none;
+        color:$Desaturated;
+    }
+    ul{
+        list-style: none;
+    }
+}
+.main{
+    width:90%;
+    margin: 0 auto;
+    padding:5rem 0;
+    @media (min-width: 550px) {
+        width:450px;
+    }
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        width:1050px;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.5rem;
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

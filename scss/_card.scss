@@ -1,0 +1,56 @@
+@import './card-cont';
+@import './mixin';
+.card{
+    width: 100%;
+    background-color: $Dark;
+    padding:1.5rem;
+    border-radius:25px;
+    z-index: 3;
+    @media (min-width: 1200px) {
+        height: 80%;
+        width:245px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__header{
+        @include flex-direction;
+        //#BBC0FF
+        svg{
+            color:#BBC0FF;
+            transition: all 0.3s;
+        }
+        svg:hover{
+            color:#fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        @media (min-width: 1200px) {
+            padding:0;
+        }
+    }
+    &__title{
+        font-size:1rem;
+        font-weight: 500;
+    }
+    &__content{
+        @include flex-direction;
+        @media (min-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding:0;
+        }
+    }
+    &__hours{
+        font-size: 1.7rem;
+        font-weight:200;
+        @media (min-width: 1200px) {
+            font-size: 2.5rem;
+        }
+    }
+    &__last{
+        font-size: .8rem;
+        color: $Pale;
+    }
+}
